@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<Empdbcontext>(con =>con.UseSqlServer(builder.Configuration.GetConnectionString("connectionstr")));
+builder.Services.AddDbContext<Empdbcontext>(con => con.UseSqlServer(builder.Configuration.GetConnectionString("connectionstr")));
 builder.Services.AddTransient<IEmployee, Employeedetail>();
 
 var app = builder.Build();
